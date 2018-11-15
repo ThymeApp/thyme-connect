@@ -1,0 +1,22 @@
+{
+  "name": "thyme-connect",
+  "version": "1.0.0",
+  "description": "Connection layer between Thyme and external plugins",
+  "main": "main.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThymeApp/thyme-connect.git"
+  },
+  "keywords": [
+    "thyme",
+    "connect",
+    "plugins"
+  ],
+  "author": "Gaya Kessler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThymeApp/thyme-connect/issues"
+  },
+  "homepage": "https://github.com/ThymeApp/thyme-connect#readme"
+}
