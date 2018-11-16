@@ -1,8 +1,10 @@
 function callMethod(name) {
   return function() {
-    if (window.thyme[name]) {
-      window.thyme[name](arguments);
+    if (window.thyme && window.thyme[name]) {
+      window.thyme[name].apply(null, arguments);
     }
+
+    if (!window.thymeConnect) window.thymeConnect = {};
 
     if (!window.thymeConnect[name]) window.thymeConnect[name] = [];
     window.thymeConnect[name].push(arguments);
@@ -10,9 +12,11 @@ function callMethod(name) {
 }
 
 function createMethod(name, func) {
+  if (!window.thyme) window.thyme = {};
+
   window.thyme[name] = func;
 
-  if (window.thymeConnect[name]) {
+  if (window.thymeConnect && window.thymeConnect[name]) {
     window.thymeConnect[name].forEach(args => func.apply(null, args));
   }
 }
