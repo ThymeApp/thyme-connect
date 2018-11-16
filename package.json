@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Connection layer between Thyme and external plugins",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "test": "tape tests.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ThymeApp/thyme-connect.git"
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ThymeApp/thyme-connect/issues"
   },
-  "homepage": "https://github.com/ThymeApp/thyme-connect#readme"
+  "homepage": "https://github.com/ThymeApp/thyme-connect#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
 }
