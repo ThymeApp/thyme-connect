@@ -2,7 +2,7 @@
 
 Thin layer which allows communication between Thyme and external scripts.
 
-## How it works:
+## How it works internally:
 
 This following illustrates how the `thyme-connect` layer works.
 

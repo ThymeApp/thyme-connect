@@ -1,7 +1,7 @@
 function callMethod(name) {
   return function() {
     if (window.thyme && window.thyme[name]) {
-      window.thyme[name].apply(null, arguments);
+      return window.thyme[name].apply(null, arguments);
     }
 
     if (!window.thymeConnect) window.thymeConnect = {};
@@ -13,6 +13,10 @@ function callMethod(name) {
 
 function createMethod(name, func) {
   if (!window.thyme) window.thyme = {};
+
+  if (window.thyme[name]) {
+    throw new Error(name + ' is already registered.');
+  }
 
   window.thyme[name] = func;
 
