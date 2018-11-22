@@ -2,6 +2,18 @@
 
 Thin layer which allows communication between Thyme and external scripts.
 
+## Installation
+
+```
+npm install thyme-connect
+```
+
+or
+
+```
+yarn add thyme-connect
+```
+
 ## Usage in plugins
 
 ```jsx harmony
