@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Connection layer between Thyme and external plugins",
   "main": "main.js",
+  "private": false,
   "scripts": {
     "prepare": "npm run test",
     "test": "tape tests.js"
