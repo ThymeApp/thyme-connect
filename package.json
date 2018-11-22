@@ -2,8 +2,9 @@
   "name": "thyme-connect",
   "version": "1.0.0",
   "description": "Connection layer between Thyme and external plugins",
-  "main": "main.src.js",
+  "main": "main.js",
   "scripts": {
+    "prepare": "npm run test",
     "test": "tape tests.js"
   },
   "repository": {
@@ -16,8 +17,7 @@
     "plugins"
   ],
   "files": [
-    "main.src.js",
-    "main.src.js"
+    "main.js"
   ],
   "author": "Gaya Kessler",
   "license": "MIT",
