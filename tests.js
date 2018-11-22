@@ -1,5 +1,5 @@
 const test = require('tape');
-const thymeConnect = require('./main');
+const thymeConnect = require('./main.src');
 
 test('Test before available', (t) => {
   global.window = {};
