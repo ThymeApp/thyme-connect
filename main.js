@@ -31,7 +31,6 @@ module.exports = {
   registerReducer: callMethod('registerReducer'),
   registerSettingsPanel: callMethod('registerSettingsPanel'),
   registerColumn: callMethod('registerColumn'),
-  registerColumns: callMethod('registerColumns'),
   invoke: createMethod,
 };
 
