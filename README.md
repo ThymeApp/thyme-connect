@@ -4,7 +4,7 @@ Thin layer which allows communication between Thyme and external scripts.
 
 ## Usage in plugins
 
-```
+```jsx harmony
 const { registerComponent } = require('thyme-connect');
 
 // or
@@ -146,18 +146,25 @@ Example
 injectEpic((action$: ActionsObservable, state$: StateObservable) => action$.pipe(...))
 ```
 
+## Adding a new registerable function in Thyme
+
+Use `invoke` to add a new function which can be registered. Pass in the `name` and `function` to be
+executed.
+
+Will automatically execute any previously called function calls and their arguments.
+
 ## How it works internally:
 
 This following illustrates how the `thyme-connect` layer works.
 
-### External script perspective
+### External script's perspective
 
 1. Import and call register function.
 2. `thyme-connect` check if the Thyme function is available.
 3. If it is available: call the function with the arguments.
 4. If it's not available: store the call in an array with the arguments in the `window` object.
 
-### Thyme perspective
+### Thyme's perspective
 
 1. Import `thyme-connect` layer.
 2. Register the register function as available.
